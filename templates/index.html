@@ -1,0 +1,59 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% import "bootstrap/utils.html" as util %}
+
+{% block content %}
+{{util.flashed_messages(dismissible=True)}}
+
+<header>
+    <div class="collapse bg-dark" id="navbarHeader">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4 offset-md-1 py-4">
+            <h4 class="text-white">Contact</h4>
+            <ul class="list-unstyled">
+              <li><a href="http://twitter.com/lpicanco" class="text-white">Follow on Twitter</a></li>
+              <li><a href="http://github.com/lpicanco" class="text-white">My github</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="navbar navbar-dark bg-dark shadow-sm">
+      <div class="container d-flex justify-content-between">
+        <a href="#" class="navbar-brand d-flex align-items-center">
+          <strong>Facial Expression Recognition</strong>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  
+  <main role="main">
+    <section class="jumbotron text-center">
+      <div class="container">
+        <h1 class="jumbotron-heading">Facial Expression Recognition</h1>
+        <p class="lead text-muted">Send a picture to detect the emotion of the faces in it</p>
+        
+        <div class="input-group mb-3 form-group">
+            <div class="custom-file">
+              <input type="file" class="custom-file-input" id="inputGroupFile02">
+              <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
+            </div>
+            <div class="input-group-append">
+              <span class="input-group-text" id="inputGroupFileAddon02">Upload</span>
+            </div>
+          </div>
+          
+      </div>
+    </section>
+    
+  </main>
+  
+{% endblock %}
+
+{% block head %}
+{{super()}}
+{% endblock %}
